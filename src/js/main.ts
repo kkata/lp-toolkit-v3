@@ -1,4 +1,5 @@
 import { setupCounter } from "./components/counter";
+import { usersList } from "./components/usersList";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -9,4 +10,4 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 
 setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
 
-export {};
+usersList();
