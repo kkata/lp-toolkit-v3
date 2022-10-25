@@ -7,13 +7,15 @@
     "node": "16"
   },
   "scripts": {
-    "dev": "vite",
+    "start": "concurrently \"npm run dev:vite\" \"npm run dev:html\"",
+    "dev:vite": "vite",
     "dev:html": "eleventy --watch --config=.eleventy.cjs",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "concurrently": "^7.5.0",
     "html-minifier": "^4.0.0",
     "sass": "^1.55.0",
     "typescript": "^4.6.4",
